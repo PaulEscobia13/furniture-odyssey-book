@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#181a1b">
+  <meta name="description" content="Furniture Odyssey. A Prometheus case study presented as a floating, interactive hardcover. Drag to explore and click to open.">
+  <title>Furniture Odyssey — The Edition</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%23181a1b'/%3E%3Cpath d='M9 6h15v20H9Q6 26 6 23V9Q6 6 9 6Z' fill='%23c96f42'/%3E%3Cpath d='M10 6v20' stroke='%23181a1b' stroke-width='2'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="reader.css">
+  <script type="importmap">{"imports":{"three":"./vendor/three.module.js"}}</script>
+  <script src="app.js" defer></script>
+  <script src="viewer.js" type="module"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="header">
+    <a class="wordmark" href="#" aria-label="The Edition home"><span class="mark" aria-hidden="true">E.</span><span>THE EDITION</span></a>
+    <nav aria-label="Main navigation"><a href="#details">The details</a><button class="focus-button" data-focus>Focus view <span class="expand-icon" aria-hidden="true">⛶</span></button></nav>
+  </header>
+  <main id="main">
+    <section class="hero" aria-labelledby="title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="short-rule"></span> PROMETHEUS · CASE STUDY</p>
+        <h1 id="title" class="fo-title">Furniture<br><em>Odyssey.</em></h1>
+        <p class="description">How Prometheus unified<br>online furniture operations.</p>
+        <a class="details-link" href="#details">Explore the edition <span aria-hidden="true">+</span></a>
+        <p class="edition-note">A STUDY IN FORM &amp; TEXTURE <span>01 / 01</span></p>
+      </div>
+      <div class="book-stage">
+        <div class="ambient" aria-hidden="true"></div>
+        <div class="book-viewer" data-viewer tabindex="0" role="group" aria-label="Interactive Furniture Odyssey book. Click or press Enter to open. Drag or use arrow keys to rotate."><img class="floating-book fallback-book" src="furniture-odyssey.png" width="1120" height="1440" alt="Furniture Odyssey hardcover with cream artwork, a teal chair, and golden botanical details" fetchpriority="high"></div>
+        <div class="ground-shadow" aria-hidden="true"></div>
+        <div class="stage-caption"><button class="open-book-link" data-open>Click to open · drag to explore</button><button class="motion-button" aria-pressed="false" data-motion><span class="motion-icon" aria-hidden="true">Ⅱ</span><span data-motion-label>Pause motion</span></button></div>
+      </div>
+    </section>
+    <section class="details" id="details" aria-labelledby="details-title">
+      <div class="details-heading"><p class="eyebrow">THE DETAILS</p><h2 id="details-title">Character in<br>every <em>detail.</em></h2><p>Warm tones. Considered form.<br>A new perspective on operations.</p></div>
+      <div class="detail-grid">
+        <article><span class="detail-number">01</span><h3>Warmth &amp; color</h3><p>Cream, muted teal, and golden botanical details bring the cover's furniture setting into focus.</p></article>
+        <article><span class="detail-number">02</span><h3>Cover &amp; spine</h3><p>Your front-cover artwork and case-study spine wrap a refined hardcover with a matching cream back.</p></article>
+        <article><span class="detail-number">03</span><h3>Form &amp; proportion</h3><p>A slim hardcover, defined spine, and pale page edges give the object its depth.</p></article>
+      </div>
+    </section>
+  </main>
+  <footer><a class="footer-title" href="#">Furniture Odyssey <span>by Prometheus</span></a><span>THE EDITION / 01</span><a href="#main">Back to top</a></footer>
+  <dialog id="focus-dialog" aria-labelledby="focus-title">
+    <div class="dialog-header"><h2 id="focus-title">Furniture Odyssey <span>Prometheus · interactive case study</span></h2><button class="close-button" aria-label="Close book view">Close <span aria-hidden="true">×</span></button></div>
+    <div class="focus-stage"><div class="ambient" aria-hidden="true"></div><div class="book-viewer" data-viewer data-reader-viewer tabindex="0" role="group" aria-label="Interactive close view. Click or press Enter to open the book. Drag to rotate."><img class="floating-book fallback-book" src="furniture-odyssey.png" width="1120" height="1440" alt="Close view of the Furniture Odyssey cover"><div class="reader-pages" aria-label="Book pages" hidden><article class="paper-page" data-paper="left"></article><article class="paper-page" data-paper="right"></article></div></div><div class="ground-shadow" aria-hidden="true"></div></div>
+    <div class="focus-caption"><button class="open-book-link" data-open>Open the book</button><button class="motion-button" aria-pressed="false" data-motion><span class="motion-icon" aria-hidden="true">Ⅱ</span><span data-motion-label>Pause motion</span></button></div>
+    <div class="reader-controls" hidden><button class="page-nav" data-page="back">Back page</button><span class="page-status" role="status" aria-live="polite">Pages 1–2 of 6</span><button class="page-nav" data-page="next">Next page</button></div>
+    <div class="mobile-reading" hidden aria-label="Readable book text"></div>
+    <p class="reader-note" hidden>Sample reading pages · original cover artwork preserved <button data-close-book>Close the book</button></p>
+  </dialog>
+</body>
+</html>
